@@ -151,3 +151,16 @@ f. Lỗi xác thực chuỗi chứng chỉ hoặc timestamp
 -	Mọi hệ thống ký phải bảo vệ khóa riêng, lưu timestamp hợp lệ và kiểm tra đầy đủ các vùng dữ liệu được ký.
 -	Đảm bảo điều này sẽ giúp tài liệu PDF có giá trị pháp lý và an toàn lâu dài.
 
+## LỆNH CHẠY CODE
+Đầu tiên phải tải và cài đặt python bản 3.12.x, chuẩn bị môi trường trong vs code;
+
+Cài thư viện: pip install cryptography pypdf asn1crypto
+
+Ký file PDF: python sign_pdf.py original.pdf signed.pdf
+
+Kiểm tra chữ ký: python verify_pdf.py signed.pdf demo_cert.pem
+
+Kết quả cuối cùng log ra kiểu như này là ok:
+<img width="1159" height="149" alt="image" src="https://github.com/user-attachments/assets/9c4efb94-46ac-4653-9b85-5649e09840f5" />
+
+
